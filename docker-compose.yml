@@ -1,0 +1,16 @@
+services:
+  zapret-singbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: zapret-singbox
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - ZAPRET_STRATEGY=general_fake_tls_auto_alt_3     # Стратегия
+    ports:
+      - "7890:7890"                       # HTTP/SOCKS sing-box
+    volumes:
+      - ./configs/sing-box:/opt/sing-box/configs
+      - ./configs/zapret:/opt/zapret/zapret.cfgs/configurations
+      - ./logs/sing-box:/opt/sing-box/logs

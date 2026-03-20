@@ -1,0 +1,7 @@
+logs/
+strategy_test_results/
+blockcheck_results/
+configs/zapret/
+*.tar.gz
+*.log
+.env
