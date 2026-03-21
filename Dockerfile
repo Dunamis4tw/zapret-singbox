@@ -15,7 +15,13 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     procps \
     dnsutils \
+    locales \
+    && echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen \
+    && locale-gen \
     && rm -rf /var/lib/apt/lists/*
+
+ENV LANG=ru_RU.UTF-8
+ENV LC_ALL=ru_RU.UTF-8
 
 # iptables-legacy стабильнее работает в привилегированных контейнерах
 RUN update-alternatives --set iptables /usr/sbin/iptables-legacy \
