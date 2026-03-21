@@ -5,7 +5,7 @@
 # НАСТРОЙКИ — редактируй здесь
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PROXY="http://127.0.0.1:7890"          # sing-box mixed proxy
+PROXY="http://127.0.0.1:7890"           # sing-box mixed proxy
 CURL_TIMEOUT=5                          # секунд на весь запрос
 CURL_CONNECT_TIMEOUT=4                  # секунд на установку соединения
 RESTART_WAIT=4                          # секунд ждать после перезапуска контейнера
@@ -17,10 +17,6 @@ DEFAULT_SITES=(
     "https://youtube.com"
     "https://x.com"
     "https://instagram.com"
-    "https://facebook.com"
-    "https://twitter.com"
-    "https://twitch.tv"
-    "https://reddit.com"
     "https://t.me"
     "https://store.steampowered.com"
     # Добавляй свои сайты сюда:
